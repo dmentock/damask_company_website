@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Customized, ready-to-run DAMASK simulation pipelines for multi-physics materials simulations."
+    />
+    <title>DAMASK Workflows | Advanced Materials, Simplified Workflows</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              graphite: "#17201f",
+              ink: "#26302e",
+              muted: "#64716d",
+              line: "#dce4e1",
+              mist: "#f4f8f7",
+              teal: "#0f766e",
+              tealDark: "#115e59",
+              amber: "#d9931d",
+            },
+            fontFamily: {
+              sans: [
+                "Inter",
+                "ui-sans-serif",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "sans-serif",
+              ],
+            },
+            boxShadow: {
+              soft: "0 24px 70px rgba(23, 32, 31, 0.10)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white font-sans text-graphite antialiased">
+    <header class="sticky top-0 z-50 border-b border-line/80 bg-white/92 backdrop-blur">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10" aria-label="Main navigation">
+        <a href="#top" class="flex items-center gap-3" aria-label="DAMASK Workflows home">
+          <span class="grid h-9 w-9 place-items-center rounded border border-teal/25 bg-teal/10 text-sm font-semibold text-tealDark">DW</span>
+          <span class="text-sm font-semibold text-graphite sm:text-base">DAMASK Workflows</span>
+        </a>
+        <div class="hidden items-center gap-8 text-sm font-medium text-muted md:flex">
+          <a class="transition hover:text-tealDark" href="#capabilities">Capabilities</a>
+          <a class="transition hover:text-tealDark" href="#services">Services</a>
+          <a class="transition hover:text-tealDark" href="#expertise">Expertise</a>
+          <a class="transition hover:text-tealDark" href="#contact">Contact</a>
+        </div>
+        <a
+          href="#contact"
+          class="hidden rounded border border-teal bg-teal px-4 py-2 text-sm font-semibold text-white transition hover:bg-tealDark sm:inline-flex"
+        >
+          Schedule a Consultation
+        </a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="relative overflow-hidden border-b border-line">
+        <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[760px] lg:grid-cols-[0.92fr_1.08fr] lg:px-10 lg:py-16">
+          <div class="hero-copy min-w-0 max-w-2xl">
+            <h1 class="max-w-[350px] text-5xl font-semibold leading-[1.03] text-graphite sm:max-w-4xl sm:text-6xl lg:text-7xl">
+              Advanced Materials, Simplified Workflows.
+            </h1>
+            <p class="mt-7 max-w-[350px] text-lg leading-8 text-ink sm:max-w-xl sm:text-xl">
+              We build customized, ready-to-run DAMASK simulation pipelines for multi-physics simulations so your team can focus on innovation, not troubleshooting.
+            </p>
+            <p class="mt-5 max-w-[350px] text-base leading-7 text-muted sm:max-w-xl">
+              As materials become more complex, more physics phenomena depend on each other. Understanding these interdependent effects is key to unlocking advanced material properties.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#contact" class="inline-flex w-[350px] max-w-full items-center justify-center rounded border border-teal bg-teal px-5 py-3 text-sm font-semibold text-white transition hover:bg-tealDark sm:w-auto">
+                Schedule a Consultation
+              </a>
+              <a href="#capabilities" class="inline-flex w-[350px] max-w-full items-center justify-center rounded border border-line bg-white px-5 py-3 text-sm font-semibold text-graphite transition hover:border-teal hover:text-tealDark sm:w-auto">
+                See Our Capabilities
+              </a>
+            </div>
+          </div>
+
+          <div class="relative min-w-0">
+            <div class="hero-frame overflow-hidden rounded-lg border border-line bg-mist shadow-soft">
+              <img
+                src="assets/materials-simulation-hero.png"
+                alt="Abstract material simulation visualization with crystal grain structures, lattice meshes, and contour fields"
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="capabilities" class="bg-mist py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <h2 class="text-3xl font-semibold leading-tight text-graphite sm:text-4xl">Breaking the Barriers to Multiphysics Simulation</h2>
+              <p class="mt-5 max-w-xl text-base leading-7 text-muted">
+                Understanding complex material behavior requires advanced multi-physics modelling. Implementing simulation workflows involving tools like DAMASK usually comes with steep hurdles.
+              </p>
+            </div>
+            <div class="grid gap-4 md:grid-cols-3">
+              <article class="rounded-lg border border-line bg-white p-6">
+                <div class="mb-5 h-1 w-12 bg-amber"></div>
+                <h3 class="text-lg font-semibold text-graphite">Extreme Complexity</h3>
+                <p class="mt-3 text-sm leading-6 text-muted">Setting up material simulations requires highly specialized domain knowledge.</p>
+              </article>
+              <article class="rounded-lg border border-line bg-white p-6">
+                <div class="mb-5 h-1 w-12 bg-teal"></div>
+                <h3 class="text-lg font-semibold text-graphite">Heavy Infrastructure</h3>
+                <p class="mt-3 text-sm leading-6 text-muted">Running models often demands expensive, high-performance workstations.</p>
+              </article>
+              <article class="rounded-lg border border-line bg-white p-6">
+                <div class="mb-5 h-1 w-12 bg-amber"></div>
+                <h3 class="text-lg font-semibold text-graphite">Fragmented Workflows</h3>
+                <p class="mt-3 text-sm leading-6 text-muted">Developing and linking simulation steps is time-consuming for non-experts.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="max-w-3xl">
+            <h2 class="text-3xl font-semibold leading-tight text-graphite sm:text-4xl">The Solution: Tailored Simulation Pipelines</h2>
+            <p class="mt-5 text-base leading-7 text-muted">
+              We remove the friction by building customized, end-to-end simulation workflows tailored to your metallurgical and material science challenges.
+            </p>
+          </div>
+
+          <div class="mt-12 overflow-hidden rounded-lg border border-line">
+            <div class="hidden grid-cols-[0.8fr_1.1fr_1.1fr] border-b border-line bg-mist px-6 py-4 text-xs font-semibold uppercase text-muted md:grid">
+              <span>Service</span>
+              <span>What You Get</span>
+              <span>The Benefit</span>
+            </div>
+            <div class="divide-y divide-line">
+              <article class="grid gap-5 bg-white p-6 md:grid-cols-[0.8fr_1.1fr_1.1fr] md:gap-8">
+                <h3 class="text-lg font-semibold text-graphite">Custom DAMASK Workflows</h3>
+                <p class="text-sm leading-6 text-muted">Tailored crystal plasticity simulation pipelines built for your specific alloys or materials.</p>
+                <p class="text-sm leading-6 text-ink">Our team includes DAMASK developers, so you get robust workflows without tedious setup.</p>
+              </article>
+              <article class="grid gap-5 bg-white p-6 md:grid-cols-[0.8fr_1.1fr_1.1fr] md:gap-8">
+                <h3 class="text-lg font-semibold text-graphite">End-to-End Automation</h3>
+                <p class="text-sm leading-6 text-muted">Streamlined workflows that connect experimental data, geometry generation, simulation runs, and post-processing steps.</p>
+                <p class="text-sm leading-6 text-ink">Save weeks of manual development time. Run the workflow in the background and receive rich data with less operational hassle.</p>
+              </article>
+              <article class="grid gap-5 bg-white p-6 md:grid-cols-[0.8fr_1.1fr_1.1fr] md:gap-8">
+                <h3 class="text-lg font-semibold text-graphite">Optimization &amp; Scaling</h3>
+                <p class="text-sm leading-6 text-muted">Workflows configured to run efficiently while maximizing your existing computing hardware.</p>
+                <p class="text-sm leading-6 text-ink">Increase throughput without necessarily buying massive new servers.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="expertise" class="border-y border-line bg-graphite py-20 text-white sm:py-24">
+        <div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-10">
+          <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Why Partner With Us?</h2>
+          <div>
+            <h3 class="text-2xl font-semibold text-white">Deep Domain Expertise, Zero Learning Curve.</h3>
+            <p class="mt-5 text-base leading-8 text-white/76">
+              We are not just software developers; we are materials scientists and simulation experts with backgrounds in academia and industry. This helps us connect the simulation world to real-world material science applications.
+            </p>
+            <p class="mt-5 text-base leading-8 text-white/76">
+              With broad experience across diverse multiphysics domains, we understand the physics behind the code. We translate complex material behavior into robust, reproducible digital workflows, giving your team PhD-level capabilities from day one.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="grid gap-8 rounded-lg border border-line bg-mist p-8 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <h2 class="text-3xl font-semibold leading-tight text-graphite sm:text-4xl">Ready to accelerate your material R&amp;D?</h2>
+              <p class="mt-4 max-w-2xl text-base leading-7 text-muted">
+                Let’s discuss your current needs for computer-based material simulations and how we can automate them.
+              </p>
+            </div>
+            <a href="mailto:hello@example.com?subject=Workflow%20Evaluation" class="inline-flex w-full items-center justify-center rounded border border-teal bg-teal px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-tealDark sm:w-auto">
+              Get a Free Workflow Evaluation
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-line py-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
+        <p>DAMASK Workflows</p>
+        <p>Customized simulation pipelines for advanced materials teams.</p>
+      </div>
+    </footer>
+  </body>
+</html>

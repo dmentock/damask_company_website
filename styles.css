@@ -1,0 +1,37 @@
+.hero-frame {
+  aspect-ratio: 16 / 10;
+  position: relative;
+}
+
+.hero-frame::after {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 12% 16%, rgba(15, 118, 110, 0.12), transparent 24%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hero-copy {
+  max-width: min(42rem, calc(100vw - 40px));
+}
+
+@media (max-width: 640px) {
+  .hero-frame {
+    aspect-ratio: 4 / 3;
+  }
+}
