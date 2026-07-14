@@ -1,16 +1,6 @@
 .hero-frame {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 863 / 289;
   position: relative;
-}
-
-.hero-frame::after {
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)),
-    radial-gradient(circle at 12% 16%, rgba(15, 118, 110, 0.12), transparent 24%);
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
 }
 
 html {
@@ -30,8 +20,14 @@ img {
   max-width: min(42rem, calc(100vw - 40px));
 }
 
+@media (min-width: 768px) {
+  .aligned-tile-grid > article > h3 {
+    min-height: 3.25rem;
+  }
+}
+
 @media (max-width: 640px) {
   .hero-frame {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 863 / 289;
   }
 }
