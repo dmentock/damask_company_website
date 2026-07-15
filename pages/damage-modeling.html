@@ -9,59 +9,22 @@
     />
     <title>Damage-Sensitive Virtual Test Cases | DAMASK Workflows</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              graphite: "#17201f",
-              ink: "#26302e",
-              muted: "#64716d",
-              line: "#dce4e1",
-              mist: "#f4f8f7",
-              teal: "#0f766e",
-              tealDark: "#115e59",
-              amber: "#d9931d",
-            },
-            fontFamily: {
-              sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
-            },
-            boxShadow: { soft: "0 24px 70px rgba(23, 32, 31, 0.10)" },
-          },
-        },
-      };
-    </script>
+    <script src="../theme.js"></script>
+    <script>window.SITE_BASE = "../";</script>
     <link rel="stylesheet" href="../styles.css?v=3" />
   </head>
   <body class="bg-white font-sans text-graphite antialiased">
-    <header class="sticky top-0 z-50 border-b border-line/80 bg-white/92 backdrop-blur">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10" aria-label="Main navigation">
-        <a href="../index.html#top" class="flex items-center gap-3" aria-label="DAMASK Workflows home">
-          <span class="grid h-9 w-9 place-items-center rounded border border-teal/25 bg-teal/10 text-sm font-semibold text-tealDark">DW</span>
-          <span class="text-sm font-semibold text-graphite sm:text-base">DAMASK Workflows</span>
-        </a>
-        <div class="hidden items-center gap-8 text-sm font-medium text-muted md:flex">
-          <a class="transition hover:text-tealDark" href="../index.html#capabilities">Capabilities</a>
-          <a class="transition hover:text-tealDark" href="../index.html#services">Services</a>
-          <a class="transition hover:text-tealDark" href="../index.html#use-cases">Use Cases</a>
-          <a class="transition hover:text-tealDark" href="../index.html#process">Process</a>
-          <a class="transition hover:text-tealDark" href="../index.html#contact">Contact</a>
-        </div>
-        <a href="../index.html#contact" class="hidden rounded border border-teal bg-teal px-4 py-2 text-sm font-semibold text-white transition hover:bg-tealDark sm:inline-flex">
-          Schedule a Consultation
-        </a>
-      </nav>
-    </header>
+    <div data-include="header"></div>
 
     <main>
       <section class="border-b border-line bg-mist py-12 sm:py-14">
         <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <p class="breadcrumb">
             <a href="../index.html">Home</a><span class="breadcrumb__sep">/</span>
-            <a href="../index.html#use-cases">Use Cases</a><span class="breadcrumb__sep">/</span>
+            <a href="../index.html#use-cases">Example Use Cases</a><span class="breadcrumb__sep">/</span>
             Damage-sensitive test cases
           </p>
-          <p class="section-label mt-6">Use Case</p>
+          <p class="section-label mt-6">Example Use Case</p>
           <h1 class="mt-4 max-w-3xl text-4xl font-semibold leading-[1.1] text-graphite sm:text-5xl">
             Damage-sensitive virtual test cases
           </h1>
@@ -106,97 +69,16 @@
 
       <section class="border-t border-line bg-mist py-12 sm:py-14">
         <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <p class="section-label">More use cases</p>
-          <div class="uc-grid mt-6" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
-            <a class="uc-card" href="micromechanics.html">
-              <div class="uc-card__media"><img src="../assets/thumb-micromechanics.jpg" alt="Local strain fields." loading="lazy" /></div>
-              <div class="uc-card__body">
-                <p class="uc-card__kicker">Micromechanics</p>
-                <h3 class="uc-card__title">Deformation &amp; local fields</h3>
-                <span class="uc-card__more">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-              </div>
-            </a>
-            <a class="uc-card" href="texture-evolution.html">
-              <div class="uc-card__media"><img src="../assets/thumb-texture.jpg" alt="Rolling texture evolution." loading="lazy" /></div>
-              <div class="uc-card__body">
-                <p class="uc-card__kicker">Process studies</p>
-                <h3 class="uc-card__title">Texture &amp; forming routes</h3>
-                <span class="uc-card__more">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-              </div>
-            </a>
-            <a class="uc-card" href="coupled-multiphysics.html">
-              <div class="uc-card__media"><img src="../assets/thumb-coupled.jpg" alt="Chemo-mechanical fracture." loading="lazy" /></div>
-              <div class="uc-card__body">
-                <p class="uc-card__kicker">Coupled physics</p>
-                <h3 class="uc-card__title">Degradation &amp; fracture</h3>
-                <span class="uc-card__more">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-              </div>
-            </a>
-          </div>
+          <p class="section-label">More example use cases</p>
+          <div class="uc-grid mt-6" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));" data-cards="compact" data-exclude="damage-modeling"></div>
         </div>
       </section>
 
-      <section class="py-14 sm:py-16">
-        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div class="grid gap-8 rounded-lg border border-line bg-graphite p-8 text-white sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <h2 class="text-2xl font-semibold leading-tight sm:text-3xl">Bring us a materials challenge</h2>
-              <p class="mt-4 max-w-2xl text-base leading-7 text-white/76">
-                Tell us your material, loading path, and the failure you need to predict. We will identify
-                where a custom DAMASK workflow could turn this use case into a result you can rely on.
-              </p>
-            </div>
-            <a href="../index.html#contact" class="inline-flex w-full items-center justify-center rounded border border-teal bg-teal px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-tealDark sm:w-auto">
-              Schedule a Consultation
-            </a>
-          </div>
-        </div>
-      </section>
+      <div data-include="cta"></div>
     </main>
 
-    <footer class="border-t border-line py-8">
-      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
-        <p>DAMASK Workflows</p>
-        <p><a class="transition hover:text-tealDark" href="../index.html#use-cases">&larr; Back to all use cases</a></p>
-      </div>
-    </footer>
+    <div data-include="footer"></div>
 
-    <div class="uc-lightbox" data-lightbox hidden aria-hidden="true">
-      <button type="button" class="uc-lightbox__close" data-lightbox-close aria-label="Close">&times;</button>
-      <img data-lightbox-img alt="" />
-    </div>
-
-    <script>
-      (function () {
-        const lb = document.querySelector("[data-lightbox]");
-        if (!lb) return;
-        const img = lb.querySelector("[data-lightbox-img]");
-        const open = (src, alt) => {
-          img.src = src;
-          img.alt = alt || "";
-          lb.hidden = false;
-          lb.setAttribute("aria-hidden", "false");
-          document.body.style.overflow = "hidden";
-        };
-        const close = () => {
-          lb.hidden = true;
-          lb.setAttribute("aria-hidden", "true");
-          img.src = "";
-          document.body.style.overflow = "";
-        };
-        document.querySelectorAll("[data-zoom-src]").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const inner = btn.querySelector("img");
-            open(btn.dataset.zoomSrc, inner ? inner.alt : "");
-          });
-        });
-        lb.addEventListener("click", (e) => {
-          if (e.target === lb || e.target.matches("[data-lightbox-close]")) close();
-        });
-        document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape" && !lb.hidden) close();
-        });
-      })();
-    </script>
+    <script src="../site.js" defer></script>
   </body>
 </html>
