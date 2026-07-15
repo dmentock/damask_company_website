@@ -41,7 +41,7 @@
         },
       };
     </script>
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
   <body class="bg-white font-sans text-graphite antialiased">
     <header class="sticky top-0 z-50 border-b border-line/80 bg-white/92 backdrop-blur">
@@ -53,6 +53,7 @@
         <div class="hidden items-center gap-8 text-sm font-medium text-muted md:flex">
           <a class="transition hover:text-tealDark" href="#capabilities">Capabilities</a>
           <a class="transition hover:text-tealDark" href="#services">Services</a>
+          <a class="transition hover:text-tealDark" href="#use-cases">Use Cases</a>
           <a class="transition hover:text-tealDark" href="#process">Process</a>
           <a class="transition hover:text-tealDark" href="#expertise">Expertise</a>
           <a class="transition hover:text-tealDark" href="#contact">Contact</a>
@@ -212,6 +213,77 @@
               </div>
               <p class="mt-3 text-sm leading-6 text-muted">We design practical run configurations, scaling approaches, and workflow shortcuts for your workstation, server, or cluster environment.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="use-cases" class="py-14 sm:py-16 lg:py-16">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="max-w-3xl">
+            <p class="section-label">Use Cases</p>
+            <h2 class="mt-4 text-3xl font-semibold leading-tight text-graphite sm:text-4xl">From measured microstructure to comparable results</h2>
+            <p class="mt-5 text-base leading-7 text-muted">
+              Every workflow starts from the real state of a material, applies a process-relevant loading path, and returns outputs you can put next to an experiment &mdash; from microstructure-resolved stress and strain to texture evolution, coupled degradation, and damage.
+            </p>
+          </div>
+
+          <!-- Application cards, each linking to a detailed subpage -->
+          <div class="uc-grid mt-10">
+            <a class="uc-card" href="pages/micromechanics.html">
+              <div class="uc-card__media">
+                <img src="assets/thumb-micromechanics.jpg" alt="Local stress-concentration field resolved across a polycrystalline microstructure." loading="lazy" />
+              </div>
+              <div class="uc-card__body">
+                <p class="uc-card__kicker">Micromechanics</p>
+                <h3 class="uc-card__title">Deformation &amp; local fields</h3>
+                <p class="uc-card__text">EBSD-informed stress and strain fields that show how load partitions and where deformation localizes &mdash; down to complex packet structures.</p>
+                <span class="uc-card__more">Explore
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <a class="uc-card" href="pages/texture-evolution.html">
+              <div class="uc-card__media">
+                <img src="assets/thumb-texture.jpg" alt="Crystallographic texture bands after heavy rolling reduction." loading="lazy" />
+              </div>
+              <div class="uc-card__body">
+                <p class="uc-card__kicker">Process studies</p>
+                <h3 class="uc-card__title">Texture &amp; forming routes</h3>
+                <p class="uc-card__text">Texture evolution followed across the full rolling and forming route &mdash; comparing routes and pinpointing the process window worth an experiment.</p>
+                <span class="uc-card__more">Explore
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <a class="uc-card" href="pages/coupled-multiphysics.html">
+              <div class="uc-card__media">
+                <img src="assets/thumb-coupled.jpg" alt="Stress field around a crack tip with a sharp stress concentration." loading="lazy" />
+              </div>
+              <div class="uc-card__body">
+                <p class="uc-card__kicker">Coupled physics</p>
+                <h3 class="uc-card__title">Degradation &amp; fracture</h3>
+                <p class="uc-card__text">Hydrogen-assisted fracture and related degradation studied as coupled problems, so mechanics and chemistry inform the same interpretation.</p>
+                <span class="uc-card__more">Explore
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <a class="uc-card" href="pages/damage-modeling.html">
+              <div class="uc-card__media">
+                <img src="assets/thumb-damage.jpg" alt="Two 3D microstructure volumes showing distributed damage indicators." loading="lazy" />
+              </div>
+              <div class="uc-card__body">
+                <p class="uc-card__kicker">Virtual testing</p>
+                <h3 class="uc-card__title">Damage-sensitive cases</h3>
+                <p class="uc-card__text">Damage workflows built up from benchmark validation to realistic microstructures and loading paths that approach component-relevant conditions.</p>
+                <span class="uc-card__more">Explore
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
