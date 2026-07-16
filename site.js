@@ -36,7 +36,7 @@
     useCaseKicker: "Example Use Case", // subpage hero kicker
     ctaHeading: "Bring us a materials challenge",
     ctaBody:
-      "Tell us your material system, loading path, and available data. We&rsquo;ll identify where a custom DAMASK workflow could turn this use case into a result you can rely on.",
+      "We provide free initial consultations to see how DAMASK workflows can be effectively applied to your particular situation.",
   };
 
   var NAV = [
