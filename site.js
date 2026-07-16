@@ -22,10 +22,27 @@
   var asset = function (file) { return base + "assets/" + file; };
   var pageHref = function (slug) { return base ? slug + ".html" : "pages/" + slug + ".html"; };
 
+  // ---------------------------------------------------------------------------
+  // Shared copy. Single place to edit any label that appears on more than one
+  // page. In HTML, drop it in with <... data-text="key"></...>. Values may
+  // contain HTML entities (they are set via innerHTML).
+  // ---------------------------------------------------------------------------
+  var LABELS = {
+    brand: "DAMASK Workflows",
+    tagline: "Customized simulation pipelines for advanced materials teams.",
+    scheduleCta: "Schedule a Consultation",
+    navUseCases: "Use Cases", // header nav link (kept short)
+    sectionUseCases: "Example Use Cases", // landing section + subpage breadcrumb
+    useCaseKicker: "Example Use Case", // subpage hero kicker
+    ctaHeading: "Bring us a materials challenge",
+    ctaBody:
+      "Tell us your material system, loading path, and available data. We&rsquo;ll identify where a custom DAMASK workflow could turn this use case into a result you can rely on.",
+  };
+
   var NAV = [
     ["#capabilities", "Capabilities"],
     ["#services", "Services"],
-    ["#use-cases", "Use Cases"],
+    ["#use-cases", LABELS.navUseCases],
     ["#process", "Process"],
     ["#expertise", "Expertise"],
     ["#contact", "Contact"],
@@ -78,10 +95,10 @@
       '<nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10" aria-label="Main navigation">' +
       '<a href="' + anchor("#top") + '" class="flex items-center gap-3" aria-label="DAMASK Workflows home">' +
       '<span class="grid h-9 w-9 place-items-center rounded border border-teal/25 bg-teal/10 text-sm font-semibold text-tealDark">DW</span>' +
-      '<span class="text-sm font-semibold text-graphite sm:text-base">DAMASK Workflows</span>' +
+      '<span class="text-sm font-semibold text-graphite sm:text-base">' + LABELS.brand + "</span>" +
       "</a>" +
       '<div class="hidden items-center gap-8 text-sm font-medium text-muted md:flex">' + links + "</div>" +
-      '<a href="' + anchor("#contact") + '" class="hidden rounded border border-teal bg-teal px-4 py-2 text-sm font-semibold text-white transition hover:bg-tealDark sm:inline-flex">Schedule a Consultation</a>' +
+      '<a href="' + anchor("#contact") + '" class="hidden rounded border border-teal bg-teal px-4 py-2 text-sm font-semibold text-white transition hover:bg-tealDark sm:inline-flex">' + LABELS.scheduleCta + "</a>" +
       "</nav></header>"
     );
   }
@@ -90,8 +107,8 @@
     return (
       '<footer class="border-t border-line py-8">' +
       '<div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">' +
-      "<p>DAMASK Workflows</p>" +
-      "<p>Customized simulation pipelines for advanced materials teams.</p>" +
+      "<p>" + LABELS.brand + "</p>" +
+      "<p>" + LABELS.tagline + "</p>" +
       "</div></footer>"
     );
   }
@@ -101,10 +118,10 @@
       '<section class="py-14 sm:py-16"><div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">' +
       '<div class="grid gap-8 rounded-lg border border-line bg-graphite p-8 text-white sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">' +
       "<div>" +
-      '<h2 class="text-2xl font-semibold leading-tight sm:text-3xl">Bring us a materials challenge</h2>' +
-      '<p class="mt-4 max-w-2xl text-base leading-7 text-white/76">Tell us your material system, loading path, and available data. We&rsquo;ll identify where a custom DAMASK workflow could turn this use case into a result you can rely on.</p>' +
+      '<h2 class="text-2xl font-semibold leading-tight sm:text-3xl">' + LABELS.ctaHeading + "</h2>" +
+      '<p class="mt-4 max-w-2xl text-base leading-7 text-white/76">' + LABELS.ctaBody + "</p>" +
       "</div>" +
-      '<a href="' + anchor("#contact") + '" class="inline-flex w-full items-center justify-center rounded border border-teal bg-teal px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-tealDark sm:w-auto">Schedule a Consultation</a>' +
+      '<a href="' + anchor("#contact") + '" class="inline-flex w-full items-center justify-center rounded border border-teal bg-teal px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-tealDark sm:w-auto">' + LABELS.scheduleCta + "</a>" +
       "</div></div></section>"
     );
   }
@@ -169,6 +186,11 @@
       el.innerHTML = USE_CASES.filter(function (u) { return exclude.indexOf(u.slug) === -1; })
         .map(function (u) { return card(u, variant); })
         .join("");
+    });
+    // Shared inline labels: <... data-text="key"></...> filled from LABELS.
+    document.querySelectorAll("[data-text]").forEach(function (el) {
+      var key = el.getAttribute("data-text");
+      if (LABELS[key] != null) el.innerHTML = LABELS[key];
     });
     setupLightbox();
   }
