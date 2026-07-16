@@ -36,7 +36,7 @@
     useCaseKicker: "Example Use Case", // subpage hero kicker
     ctaHeading: "Bring us a materials challenge",
     ctaBody:
-      "We provide free initial consultations to see how DAMASK workflows can be effectively applied to your particular situation.",
+      "We provide free initial consultations to see how DAMASK workflows can be effectively applied to your particular research problem.",
   };
 
   var NAV = [
